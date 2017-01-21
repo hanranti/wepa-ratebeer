@@ -1,5 +1,5 @@
 == README
 
-# Linkkejä
+= Linkkejä
 
 * Sovellus[https://powerful-basin-32134.herokuapp.com/breweries]
