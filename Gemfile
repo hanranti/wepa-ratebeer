@@ -7,7 +7,7 @@ gem 'rails', '4.2.7'
 
 # Postgresql
 group :deveploment, :test do
-  gem 'sqlite3'
+#  gem 'sqlite3'
 end
 
 group :production do
