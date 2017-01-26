@@ -1,3 +1,22 @@
 <h2>List of ratings</h2>
 
+<ul>
+ <% @ratings.each do |rating| %>
+   <li> <%= rating %> </li>
+ <% end %>
+</ul>
+
+<!--<ul>
+    <% @beers.each do |beer| %>
+    <li>
+        <%= link_to "#{beer.name}", beer %>
+        <br>
+        Ratings: 
+        <% beer.ratings.each do |rating| %>
+        <%= rating.score%>
+        <% end %>
+    </li>
+    <% end %>
+</ul>-->
+
 <p>To be completed...</p>
