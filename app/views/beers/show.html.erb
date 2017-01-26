@@ -12,7 +12,16 @@
 
 <p>
   <strong>Brewery:</strong>
-  <%= @beer.brewery_id %>
+  <%= Brewery.find(@beer.brewery_id).name %>
+</p>
+
+<p>
+  <% if @beer.ratings.empty? %>
+  <strong>Beer has not yet been rated!</strong>
+  <% else %>
+  <strong>Average of <%= @beer.ratings.count%> ratings:</strong>
+  <%= @beer.average_rating %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %> |
