@@ -12,7 +12,7 @@ class Beer < ActiveRecord::Base
             scores << rating.score
         end
         average = scores.inject {|score, n| score + n}
-        average /= scores.count
+        average /= scores.count.to_f
 
 #        average = 0;
 #        ratings.each do |rating|
