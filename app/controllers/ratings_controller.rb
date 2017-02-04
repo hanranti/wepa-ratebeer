@@ -11,8 +11,12 @@ class RatingsController < ApplicationController
 
     def create
         if (!Beer.find_by(id: params[:rating][:beer_id]).nil?)
-            Rating.create params.require(:rating).permit(:score, :beer_id)
+            rating = Rating.create params.require(:rating).permit(:score, :beer_id)
         end
+
+        # talletetaan tehdyn reittauksen sessioon
+        session[:last_rating] = "#{rating.beer.name} #{rating.score} points"
+
         redirect_to ratings_path
     end
 
