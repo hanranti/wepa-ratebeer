@@ -67,7 +67,7 @@ describe "User" do
     visit user_path(User.first)
     expect(page).to have_content 'beer 12'
 
-    page.find("a", :class => "#{beer.name}").click_link('Delete')
+    page.find("li", :class => "#{beer.name}").click_link('Delete')
       
     expect(page).not_to have_content 'beer 12'
   end
