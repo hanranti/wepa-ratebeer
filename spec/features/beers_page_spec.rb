@@ -4,8 +4,8 @@ include Helpers
 
 describe "Beer" do 
   before :each do
-    #FactoryGirl.create :user
-    #sign_in(username:"Pekka", password:"Foobar1")
+    FactoryGirl.create :user
+    sign_in(username:"Pekka", password:"Foobar1")
   end
 
   describe "when is being saved" do
