@@ -19,6 +19,20 @@ class User < ActiveRecord::Base
     ratings.sort_by{ |r| r.score }.last.beer
   end
 
+  def favorite_style
+    return nil if ratings.empty?
+    favorite = "Weizen"
+    bestAverage = 0;
+    ["Weizen", "Lager", "Pale ale", "IPA", "Porter"].each do |style|
+      average = average_rating_for_style(style)
+      if average > bestAverage
+        favorite = style
+        bestAverage = average
+      end
+    end
+    favorite
+  end
+
   def to_s
     username
   end

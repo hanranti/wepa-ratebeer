@@ -20,4 +20,19 @@ module RatingAverage
 
         ratings.average(:score)
   end
+
+  def average_rating_for_style(style)
+    ratingsWithStyle = ratings.select{|rating| rating.beer.style.eql? style}
+    if ratingsWithStyle.count == 0
+      return 0;
+    else
+      
+    end
+    scores = Array.new
+    ratingsWithStyle.each do |rating|
+      scores << rating.score
+    end
+    average = scores.inject {|score, n| score + n}
+    average /= scores.count.to_f
+  end
 end
