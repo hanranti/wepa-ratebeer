@@ -22,11 +22,25 @@ class User < ActiveRecord::Base
   def favorite_style
     return nil if ratings.empty?
     favorite = "Weizen"
-    bestAverage = 0;
+    bestAverage = 0
     ["Weizen", "Lager", "Pale ale", "IPA", "Porter"].each do |style|
-      average = average_rating_for_style(style)
+      average = average_rating_for_style_and_brewery(style, nil)
       if average > bestAverage
         favorite = style
+        bestAverage = average
+      end
+    end
+    favorite
+  end
+
+  def favorite_brewery
+    return nil if ratings.empty?
+    favorite = Brewery.first
+    bestAverage = 0
+    Brewery.all.each do |brewery|
+      average = average_rating_for_style_and_brewery(nil, brewery)
+      if average > bestAverage
+        favorite = brewery
         bestAverage = average
       end
     end
