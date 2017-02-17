@@ -69,3 +69,5 @@ group :test do
   gem 'simplecov', require: false
 end
 
+#travis
+#gem install travis -v 1.8.6 --no-rdoc --no-ri
