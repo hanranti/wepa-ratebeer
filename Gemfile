@@ -71,3 +71,6 @@ end
 
 #travis
 #gem install travis -v 1.8.6 --no-rdoc --no-ri
+
+#httparty
+gem 'httparty'
