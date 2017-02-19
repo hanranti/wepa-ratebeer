@@ -13,4 +13,13 @@ class PlacesController < ApplicationController
       render :index
     end
   end
+  
+  def show
+    @place = BeermappingApi.place_by_id(params[:id])
+    if @place.empty?
+      redirect_to places_path, notice: "City not valid!"
+    else
+      render :show
+    end
+  end
 end

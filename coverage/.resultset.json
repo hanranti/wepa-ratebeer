@@ -514,11 +514,34 @@
       "/home/hanranti/src/ratebeer/lib/beermapping_api.rb": [
         1,
         1,
+        5,
+        9,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        4,
+        4,
+        null,
+        4,
+        null,
+        3,
+        3,
+        11,
+        null,
+        null,
+        null,
+        1,
         0,
         null,
         0,
-        0,
-        null,
         0,
         null,
         0,
@@ -528,14 +551,15 @@
         null,
         null,
         1,
-        0,
+        4,
+        4,
         null,
         null
       ],
       "/home/hanranti/src/ratebeer/app/models/place.rb": [
         1,
         1,
-        5,
+        29,
         null,
         null
       ],
@@ -553,6 +577,15 @@
         1,
         null,
         2,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
         null
@@ -754,6 +787,6 @@
         0
       ]
     },
-    "timestamp": 1487500979
+    "timestamp": 1487517957
   }
 }
