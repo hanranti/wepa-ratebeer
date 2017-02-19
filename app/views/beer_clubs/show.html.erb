@@ -21,7 +21,7 @@
     <li><%= link_to "#{member}", member %></li>
   <% end %>
 </ul>
-<% if current_user%>
+<% if current_user && Membership.where(:user => current_user, :beer_club => @beer_club).count == 0 %>
   <%= form_for(@membership) do |f| %>
     <%= f.hidden_field :beer_club_id %>
     <%= f.submit value:"join the club" %>
