@@ -11,7 +11,9 @@ class BeerClubsController < ApplicationController
   # GET /beer_clubs/1
   # GET /beer_clubs/1.json
   def show
-    @membership = Membership.new beer_club:@beer_club
+    @membership = Membership.where(:user => current_user, :beer_club => @beer_club).first
+    #binding.pry
+    @membership = Membership.new beer_club:@beer_club if @membership.nil?
   end
 
   # GET /beer_clubs/new
